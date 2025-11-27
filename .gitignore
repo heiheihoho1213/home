@@ -6,13 +6,15 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-.next/*
-.pnpm-store/*
 
 node_modules
 dist
 dist-ssr
 *.local
+
+.next/*
+.pnpm-store/*
+next-env.d.ts
 
 # Editor directories and files
 .vscode/*
