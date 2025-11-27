@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":["file:///Users/user/Downloads/new-blog/node_modules/.pnpm/next%4016.0.4_react-dom%4019.2.0_react%4019.2.0__react%4019.2.0/node_modules/next/link.js"],"sourcesContent":["module.exports = require('./dist/client/link')\n"],"names":[],"mappings":"AAAA,OAAO,OAAO","ignoreList":[0]}},
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/user/Downloads/new-blog/node_modules/.pnpm/next%4016.0.4_react-dom%4019.2.0_react%4019.2.0__react%4019.2.0/node_modules/next/navigation.js"],"sourcesContent":["module.exports = require('./dist/client/components/navigation')\n"],"names":[],"mappings":"AAAA,OAAO,OAAO","ignoreList":[0]}},
+    {"offset": {"line": 11, "column": 0}, "map": {"version":3,"sources":["file:///Users/user/Downloads/new-blog/node_modules/.pnpm/next%4016.0.4_react-dom%4019.2.0_react%4019.2.0__react%4019.2.0/node_modules/next/router.js"],"sourcesContent":["module.exports = require('./dist/client/router')\n"],"names":[],"mappings":"AAAA,OAAO,OAAO","ignoreList":[0]}}]
+}
