@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/user/Downloads/new-blog/app/blog/BlogClient.tsx"],"sourcesContent":["'use client';\n\nimport BlogListClient from './BlogListClient';\nimport { CONTENT } from '../../data/content';\n\ntype BlogClientProps = {\n  content: typeof CONTENT;\n};\n\nexport default function BlogClient({ content }: BlogClientProps) {\n  return <BlogListClient content={content} />;\n}\n\n"],"names":[],"mappings":";;;;;;;;;;AAAA;;;AASe,SAAS,WAAW,EAAE,OAAO,EAAmB;IAC7D,qBAAO,6WAAC;QAAe,SAAS;;;;;;AAClC"}}]
-}
