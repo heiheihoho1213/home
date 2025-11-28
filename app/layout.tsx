@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { LanguageProvider } from '../contexts/LanguageContext';
 import { Layout } from '../components/Layout';
 import '../styles/globals.css';
@@ -8,7 +8,15 @@ export const metadata: Metadata = {
   description: 'A portfolio showcasing my projects, blogs, and gallery explorations.',
   icons: {
     icon: '/favicon.svg',
+    apple: '/favicon.svg',
+    shortcut: '/favicon.svg',
   },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({

@@ -1,0 +1,47 @@
+export const metadata = {
+  title: 'CSS',
+  description:
+    '小肚教你快速学习CSS开发',
+}
+
+import { Resources } from '@/components/Resources'
+
+## 1. 阴影研究 {{ tag: 'shadow', label: 'Microsoft logo', id: 1 }}
+
+<Resources resources={[
+  {
+    href: '/posts/css/microsoft-logo',
+    name: '1.伪元素模拟实现微软logo阴影',
+    description: '使用梯度渐变模拟阴影效果',
+  },
+  {
+    href: '/posts/css/shadow-card',
+    name: '2.立体卡片',
+    description: 'box-shadow 实现单侧阴影',
+  },
+  {
+    href: '/posts/css/ring-animation',
+    name: '3.环状进度条动画',
+    description: '使用阴影效果模拟进度条',
+  }
+]} />
+
+## 2. Tailwindcss {{ tag: 'Tailwindcss', label: '', id: 2 }}
+
+<Resources resources={[
+  {
+    href: '/posts/css/fe-tailwindcss-guide',
+    name: '1.小肚带您 Tailwind CSS 快速入门',
+    description: 'Tailwind CSS 入门篇',
+  },
+]} />
+
+## 3. 新功能前瞻 {{ tag: 'New', label: '', id: 3 }}
+
+<Resources resources={[
+  {
+    href: '/posts/css/new-2023',
+    name: '年终盘点：2023年 CSS 领域新的一些变化',
+    description: 'CSS 2023年 Chrome 最新推出的新变化',
+  },
+]} />

@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { NeoButton } from '../components/NeoButton';
 import { NeoCard } from '../components/NeoCard';
 import { Reveal } from '../components/Reveal';
@@ -17,6 +18,12 @@ export default function HomeClient({ content }: HomeClientProps) {
   const { language } = useLanguage();
   const t = TRANSLATIONS[language];
   const projects = content[language].projects;
+  const [showWechatQR, setShowWechatQR] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const groupedProjects = useMemo(() => {
     const groups: Record<string, Project[]> = {};
@@ -28,8 +35,30 @@ export default function HomeClient({ content }: HomeClientProps) {
     return groups;
   }, [projects]);
 
+  const wechatPortal =
+    showWechatQR && isClient
+      ? createPortal(
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center px-4">
+          <div className="absolute inset-0 bg-black/50" onClick={() => setShowWechatQR(false)} />
+          <div className="relative z-[10000] w-full max-w-sm bg-white border-4 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] p-4 text-center space-y-3">
+            <p className="font-black uppercase text-lg border-b-4 border-black pb-2">WECHAT</p>
+            <img
+              src="/home/img/wechat/me-qrcode.jpg"
+              alt="WeChat QR Code"
+              className="w-full h-auto object-contain border-2 border-dashed border-black p-2 bg-gray-50"
+            />
+            <NeoButton fullWidth onClick={() => setShowWechatQR(false)}>
+              Close
+            </NeoButton>
+          </div>
+        </div>,
+        document.body
+      )
+      : null;
+
   return (
     <div className="space-y-12 relative">
+      {wechatPortal}
       <Reveal>
         <section className="mt-4 mb-10 flex flex-col items-start gap-3 relative">
           <div className="inline-block bg-black text-white px-3 py-0.5 font-bold text-xs mb-1 border-2 border-black shadow-[3px_3px_0px_0px_rgba(255,255,0,1)]">
@@ -45,7 +74,7 @@ export default function HomeClient({ content }: HomeClientProps) {
             {t.hero_desc}
           </p>
           <div className="flex flex-wrap gap-3 mt-2 relative z-10">
-            <NeoButton variant="black" onClick={() => (window.location.href = 'mailto:hello@example.com')}>
+            <NeoButton variant="black" onClick={() => setShowWechatQR(true)}>
               {t.hero_contact}
             </NeoButton>
             <NeoButton onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}>
@@ -81,7 +110,7 @@ export default function HomeClient({ content }: HomeClientProps) {
               {grouped.map((project, index) => (
                 <Reveal key={project.id} delay={index * 50 + 200}>
                   <NeoCard className="group flex flex-col h-full bg-white" hoverEffect>
-                    <a href={project.link} className="block flex-grow flex flex-col h-full">
+                    <a href={project.link} className="flex flex-col h-full flex-grow">
                       <div className="w-full aspect-video border-b-2 border-black overflow-hidden relative">
                         <img
                           src={project.image}
