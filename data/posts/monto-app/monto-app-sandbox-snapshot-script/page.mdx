@@ -1,8 +1,13 @@
-# MontoApp（六） - js 沙箱：自执行 Script 与 快照隔离
+---
+title: '搭建微前端 MontoApp（六） - js 沙箱：自执行 Script 与 快照隔离'
+slug: 'monto-app-sandbox-snapshot-script'
+date: '2024-01-11'
+readTime: '10 min'
+excerpt: '介绍自执行 Script 与 快照隔离的实现方法 ...'
+tags: ['微前端']
+---
 
 本节继续，介绍微前端中 js 隔离的方案。前一讲的 iframe 隔离，本质上是利用了 V8 引擎的隔离机制，借助 iframe 实现的；本节说的快照隔离，本质上还是把子应用执行在主应用上下文中，但是对主应用的 winodw 做快照，在子应用卸载的时候恢复快照即可。
-
-## 1. 快照隔离沙箱原理
 
 ![image.png](/img/posts/2024-1-11/2024-1-11-1.png)
 

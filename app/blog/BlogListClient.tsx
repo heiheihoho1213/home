@@ -67,7 +67,7 @@ export default function BlogListClient({ content }: BlogListClientProps) {
       <div className="space-y-6 min-h-[50vh]">
         {filteredPosts.length > 0 ? (
           filteredPosts.map((post, index) => (
-            <Reveal key={post.id} delay={index * 100}>
+            <Reveal key={post.id || post.slug + '-' + index} delay={index * 100}>
               <Link href={`/blog/${post.slug}`} className="block">
                 <NeoCard className="group cursor-pointer bg-white" hoverEffect>
                   <div className="p-6 md:p-8 flex flex-col md:flex-row gap-6 md:items-center">

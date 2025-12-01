@@ -1,7 +1,12 @@
-
-# React 源码解读
-
 ---
+title: 'React 源码解读'
+slug: 'react-source'
+date: '2024-04-25'
+readTime: '10 min'
+excerpt: '介绍 React 的虚拟 DOM、Fiber 结构、调度器等核心概念和实现原理 ...'
+tags: ['React', '源码解读']
+---
+
 
 ## 1. 虚拟 DOM
 
@@ -9,7 +14,7 @@
 
 - DOM 操作很慢，轻微的操作都可能导致页面重新排版，非常耗性能。相对于 DOM 对象，js 对象处理起来更快，而且更简单。通过 diff 算法对比新旧 vdom（js 对象） 之间的差异，可以批量的、最小化的执行 dom 操作，从而提升用户体验
 - DOM 内置属性太多，使用 vdom 可以只封装自己想要的属性来减少计算开销
-  ![图片](react/old-dom.png)
+  ![图片](/img/posts/react/old-dom.png)
 
 #### react 渲染
 
@@ -19,7 +24,7 @@
 
 react 渲染树：
 
-![图片](react/diff-tree.png)
+![图片](/img/posts/react/diff-tree.png)
 
 算法策略
 
@@ -49,7 +54,7 @@ fiber 核心思想
 3. 给不同类型的更新赋予优先级
 4. 给新版 react 提供并发的基础能力
 
-![图片](react/fiber-1.jpeg)
+![图片](/img/posts/react/fiber-1.jpeg)
 
 fiber 树(双向链表)：
 
@@ -66,7 +71,7 @@ fiber 树(双向链表)：
 </div>
 ```
 
-![图片](react/fiber-2.png)
+![图片](/img/posts/react/fiber-2.png)
 
 因为要借助 fiber，所以在 vdom 外需要包装一个 fiber node 的封装来参与调度。
 
@@ -74,7 +79,7 @@ fiber 树(双向链表)：
 
 ### 〇 流程图
 
-![图片](react/fiber.png)
+![图片](/img/posts/react/fiber.png)
 
 ### ① Tags
 
@@ -649,7 +654,7 @@ function workLoop() {
 
 ### 〇 改进的流程图
 
-![图片](react/fiber-3.png)
+![图片](/img/posts/react/fiber-3.png)
 
 ## 4. Hooks
 
@@ -967,9 +972,9 @@ function invokeHooks(wip) {
 
 ### 〇 渲染流程图
 
-![图片](react/react-hooks-useReducer.jpg)
+![图片](/img/posts/react/react-hooks-useReducer.jpg)
 
-![图片](react/react-hooks-useEffect.png)
+![图片](/img/posts/react/react-hooks-useEffect.png)
 
 接下来，我们抛开 fiber，简化一下源码逻辑，同时换一种思路来看 hook 本身，使用 preact 中的实现来讲解：
 
@@ -1191,11 +1196,11 @@ function startTimer(pendingFunc, wait) {
 ### 流程图
 
 渲染树（pfiber 就是 returnFiber）：
-![图片](react/diff-1.png)
+![图片](/img/posts/react/diff-1.png)
 
 第一步：从左往右遍历，查找直接能用的，直到遇到不能用的为止（下图中的数字代表该 fiber 的 index）：
 
-![图片](react/diff-2.png)
+![图片](/img/posts/react/diff-2.png)
 
 能复用的：
 
@@ -1220,7 +1225,7 @@ if (same) {
 
 第二步：如新节点没有了（newIndex === newChildren.length）：
 
-![图片](react/diff-3.png)
+![图片](/img/posts/react/diff-3.png)
 
 老节点往后的加入删除队列：
 
@@ -1231,7 +1236,7 @@ returnFiber.deletions.push(...)
 
 第三步：如果老节点没有了：
 
-![图片](react/diff-4.png)
+![图片](/img/posts/react/diff-4.png)
 
 新的节点依次构建链表：
 
@@ -1260,7 +1265,7 @@ const existingChildren = mapRemainingChildren(oldFiber); // new Map()
 // 遍历新节点，通过新节点的key去哈希表中查找节点，找到就复用节点，并且删除哈希表中对应的节点
 ```
 
-![图片](react/diff-5.png)
+![图片](/img/posts/react/diff-5.png)
 
 第五步：新节点遍历完后，若 hash 表中仍然有节点，则把这些节点加入 returnFiber.deletions;
 

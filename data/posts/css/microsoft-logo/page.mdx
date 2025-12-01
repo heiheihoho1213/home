@@ -1,13 +1,18 @@
-import style from '../../../../styles/shadow-card.module.css';
+---
+title: '伪元素模拟实现微软logo阴影'
+slug: 'microsoft-logo'
+date: '2022-06-15'
+readTime: '10 min'
+excerpt: '介绍伪元素模拟实现微软logo阴影的实现方法 ...'
+tags: ['CSS']
+---
+
 
 ## 1. 伪元素模拟实现微软logo阴影
 
-<hr />
+>  CSS 探究系列文章之伪shadow
 
-<Note>
-  CSS 探究系列文章之伪shadow
-</Note>
-
+```html
 <div style={{ width: '100%', height: '500px', background: 'linear-gradient(90deg, hsl(199, 98%, 50%), hsl(199, 98%, 38%))', overflow: 'hidden' }}>
   <div className={`${style.box}`}>
     <div></div>
@@ -16,10 +21,8 @@ import style from '../../../../styles/shadow-card.module.css';
     <div></div>
   </div>
 </div>
+```
 
-<br />
-
-<CodeGroup>
 
 ```html {{ title: 'HTML' }}
 <div class='box'>
@@ -81,4 +84,5 @@ import style from '../../../../styles/shadow-card.module.css';
   }
 }
 ```
-</CodeGroup>
+
+![microsoft-logo](/img/posts/css/microsoft-logo.jpg)
