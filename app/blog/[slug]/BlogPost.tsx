@@ -164,13 +164,8 @@ export default function BlogPost({ post }: BlogPostClientProps) {
                 );
               },
               img: ({ src, alt, ...props }: any) => {
-                // 处理 basePath：如果是本地路径（以 / 开头且不是外部 URL），添加 basePath
+                // 直接使用图片路径，不需要添加 basePath
                 let imageSrc = src;
-                if (src && src.startsWith('/') && !src.startsWith('//')) {
-                  // 从 next.config.mjs 读取 basePath，默认是 '/home'
-                  const basePath = '/home';
-                  imageSrc = `${basePath}${src}`;
-                }
                 return (
                   <img
                     src={imageSrc}
