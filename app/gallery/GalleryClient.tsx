@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { createPortal } from 'react-dom';
 import { NeoCard } from '../../components/NeoCard';
-import { Reveal } from '../../components/Reveal';
 import { CONTENT } from '../../data/content';
 import { GalleryItem } from '../../types';
 import { useLanguage } from '../../contexts/LanguageContext';
@@ -45,7 +44,7 @@ export default function GalleryClient({ content }: GalleryClientProps) {
           onClick={() => setSelectedImage(null)}
         >
           <div
-            className="max-w-5xl w-full max-h-[90vh] flex flex-col md:flex-row bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(255,255,255,0.5)] overflow-hidden animate-scale-up"
+            className="max-w-5xl w-full max-h-[90vh] flex flex-col md:flex-row bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(255,255,255,0.5)] overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="w-full md:w-2/3 bg-black flex items-center justify-center p-0 md:border-r-4 border-black h-[50vh] md:h-auto">
@@ -88,7 +87,6 @@ export default function GalleryClient({ content }: GalleryClientProps) {
   return (
     <>
       <div>
-        <Reveal>
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4 border-b-2 border-black pb-6">
             <div>
               <h1 className="text-6xl font-black uppercase leading-none mb-2">{t.gallery_title}</h1>
@@ -115,12 +113,10 @@ export default function GalleryClient({ content }: GalleryClientProps) {
               </button>
             </div>
           </div>
-        </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 min-h-[50vh]">
           {filteredImages.map((img, index) => (
-            <Reveal key={img.id} delay={index * 50}>
-              <NeoCard className="bg-white group overflow-hidden h-full cursor-pointer" hoverEffect>
+              <NeoCard key={img.id} className="bg-white group overflow-hidden h-full cursor-pointer" hoverEffect>
                 <div onClick={() => setSelectedImage(img)} className="relative aspect-square">
                   <img src={img.src} alt={img.alt} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors p-4 flex flex-col justify-end opacity-0 group-hover:opacity-100">
@@ -131,7 +127,6 @@ export default function GalleryClient({ content }: GalleryClientProps) {
                   </div>
                 </div>
               </NeoCard>
-            </Reveal>
           ))}
 
           {filteredImages.length === 0 && (

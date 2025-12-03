@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   title: 'Heiheihoho\'s Portfolio',
   description: 'A portfolio showcasing my projects, blogs, and gallery explorations.',
   icons: {
-    icon: '/favicon.svg',
-    apple: '/favicon.svg',
-    shortcut: '/favicon.svg',
+    icon: '/home/favicon.svg',
+    apple: '/home/favicon.svg',
+    shortcut: '/home/favicon.svg',
   },
 };
 
@@ -27,6 +27,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/home/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/home/favicon.svg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

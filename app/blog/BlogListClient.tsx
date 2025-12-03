@@ -3,7 +3,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import { NeoCard } from '../../components/NeoCard';
-import { Reveal } from '../../components/Reveal';
 import { CONTENT } from '../../data/content';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { TRANSLATIONS } from '../../data/translations';
@@ -40,7 +39,6 @@ export default function BlogListClient({ content }: BlogListClientProps) {
 
   return (
     <div className="max-w-4xl mx-auto">
-      <Reveal>
         <div className="mb-8 text-center">
           <h1 className="text-6xl font-black uppercase mb-4">{t.blog_title}</h1>
           <div className="h-2 bg-black w-24 mx-auto mb-8" />
@@ -62,13 +60,11 @@ export default function BlogListClient({ content }: BlogListClientProps) {
             ))}
           </div>
         </div>
-      </Reveal>
 
       <div className="space-y-6 min-h-[50vh]">
         {filteredPosts.length > 0 ? (
           filteredPosts.map((post, index) => (
-            <Reveal key={post.id || post.slug + '-' + index} delay={index * 100}>
-              <Link href={`/blog/${post.slug}`} className="block">
+              <Link key={post.id || post.slug + '-' + index} href={`/blog/${post.slug}`} className="block">
                 <NeoCard className="group cursor-pointer bg-white" hoverEffect>
                   <div className="p-6 md:p-8 flex flex-col md:flex-row gap-6 md:items-center">
                     <div className="flex-grow">
@@ -99,14 +95,11 @@ export default function BlogListClient({ content }: BlogListClientProps) {
                   </div>
                 </NeoCard>
               </Link>
-            </Reveal>
           ))
         ) : (
-          <Reveal>
             <div className="text-center py-20 border-2 border-dashed border-gray-400 text-gray-500 font-bold uppercase">
               {t.blog_no_results} "{selectedTag}"
             </div>
-          </Reveal>
         )}
       </div>
     </div>

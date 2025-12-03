@@ -30,7 +30,7 @@ export default function BlogPost({ post }: BlogPostClientProps) {
   }
 
   return (
-    <div className="animate-fade-in-up max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto">
       <Link href="/blog">
         <NeoButton variant="secondary" className="mb-8">
           {t.blog_back}
