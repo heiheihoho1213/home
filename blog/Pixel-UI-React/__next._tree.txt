@@ -1,0 +1,8 @@
+:HL["/_next/static/chunks/744327b7484b60d6.css","style"]
+:HL["https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap","style"]
+:HL["/img/posts/Pixel-UI-React/1.jpeg","image"]
+:HL["/img/posts/Pixel-UI-React/2.jpeg","image"]
+:HL["/img/posts/Pixel-UI-React/3.jpeg","image"]
+:HL["/img/posts/Pixel-UI-React/4.jpeg","image"]
+:HL["/img/posts/Pixel-UI-React/5.jpeg","image"]
+0:{"buildId":"gG-fcHfRh54-2G67d48NM","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"blog","paramType":null,"paramKey":"blog","hasRuntimePrefetch":false,"slots":{"children":{"name":"slug","paramType":"d","paramKey":"Pixel-UI-React","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

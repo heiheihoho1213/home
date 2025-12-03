@@ -1,0 +1,8 @@
+:HL["/_next/static/chunks/744327b7484b60d6.css","style"]
+:HL["https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap","style"]
+:HL["/img/posts/2022-6-22/2022-6-22-1.png","image"]
+:HL["/img/posts/2022-6-22/2022-6-22-2.png","image"]
+:HL["/img/posts/2022-6-22/2022-6-22-3.png","image"]
+:HL["/img/posts/2022-6-22/2022-6-22-4.png","image"]
+:HL["/img/posts/2022-6-22/2022-6-22-5.png","image"]
+0:{"buildId":"gG-fcHfRh54-2G67d48NM","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"blog","paramType":null,"paramKey":"blog","hasRuntimePrefetch":false,"slots":{"children":{"name":"slug","paramType":"d","paramKey":"fe-UI-7","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

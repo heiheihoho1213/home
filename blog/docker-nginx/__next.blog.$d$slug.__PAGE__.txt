@@ -1,0 +1,581 @@
+1:"$Sreact.fragment"
+2:I[48226,["/_next/static/chunks/13d576de3999a9ec.js"],""]
+1d6:I[99706,["/_next/static/chunks/b18da497cd71639c.js","/_next/static/chunks/a43937f87dbafba4.js"],"OutletBoundary"]
+1d7:"$Sreact.suspense"
+0:{"buildId":"gG-fcHfRh54-2G67d48NM","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"max-w-4xl mx-auto","children":[["$","$L2",null,{"href":"/blog","children":["$","button",null,{"className":"\n        relative font-bold uppercase tracking-wider border-2 border-black transition-all duration-75 active:top-[4px] active:left-[4px] active:shadow-none \n        bg-white text-black hover:bg-gray-100 \n        shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]\n        py-3 px-6 \n         \n        mb-8\n      ","children":"← Back to Overview"}]}],["$","div",null,{"className":"\n      border-2 border-black \n      bg-white\n      shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]\n      \n      p-8 md:p-12 bg-white\n    ","children":[["$","div",null,{"className":"border-b-4 border-black pb-6 mb-8","children":[["$","div",null,{"className":"flex flex-wrap items-center gap-4 mb-4 text-sm font-bold uppercase tracking-wider text-gray-500","children":[["$","span",null,{"children":"2022-12-01"}],["$","span",null,{"children":"•"}],["$","span",null,{"children":["10 min"," ","read"]}],["$","span",null,{"className":"hidden sm:inline","children":"•"}],["$","div",null,{"className":"flex gap-2","children":[["$","span","工程化",{"className":"bg-yellow-200 border border-black px-1.5 py-0.5 text-[10px] text-black","children":"工程化"}]]}]]}],["$","h1",null,{"className":"text-4xl md:text-4xl font-black uppercase leading-none","children":"使用 Docker + Nginx 部署前端项目"}]]}],["$","div",null,{"className":"prose prose-xl prose-black max-w-none font-medium markdown-content","children":[["$","p","p-0",{"className":"mb-4 text-lg leading-relaxed","children":"前端项目除了目前的纯单页应用，还有SSR的应用，例如 nuxt 和 nextjs，其区别在于前者是单独的前端页面部署，而后者使用了一个内部的 node 小型服务器来做到服务器页面直出的效果。"}],"\n",["$","p","p-1",{"className":"mb-4 text-lg leading-relaxed","children":"下面我们就针对这两种常见的前端项目，讲讲他们上线部署的流程。"}],"\n",["$","h2","h2-0",{"className":"text-2xl font-bold mt-6 mb-3 border-l-4 border-yellow-400 pl-4","children":"1. 部署单页应用"}],"\n",["$","p","p-2",{"className":"mb-4 text-lg leading-relaxed","children":"单页应用，一般使用一种或多种前端框架，在发布上线时，一般会打包（webpack + babel）为最优化的静态资源，然后使用单独的服务器（nginx）来挂载该资源。"}],"\n",["$","ul","ul-0",{"className":"ml-4 list-disc mb-4","children":["\n",["$","li","li-0",{"className":"font-bold mb-2","children":"首先我们来打包资源"}],"\n"]}],"\n",["$","p","p-3",{"className":"mb-4 text-lg leading-relaxed","children":"假设我们的项目叫 ops，其中 package.json 是这么写的："}],"\n",["$","div","pre-0,code-0",{"className":"my-4 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] bg-white","children":["$","div",null,{"node":{"type":"element","tagName":"code","properties":{"className":["language-sh"]},"children":[{"type":"text","value":"\"build\": \"react-scripts build\",\n"}],"position":{"start":{"line":14,"column":1,"offset":278},"end":{"line":16,"column":4,"offset":319}}},"style":{"background":"#ffffff","color":"hsl(230, 8%, 24%)","fontFamily":"\"Fira Code\", \"Fira Mono\", Menlo, Consolas, \"DejaVu Sans Mono\", monospace","direction":"ltr","textAlign":"left","whiteSpace":"pre","wordSpacing":"normal","wordBreak":"normal","lineHeight":"1.5","MozTabSize":"2","OTabSize":"2","tabSize":"2","WebkitHyphens":"none","MozHyphens":"none","msHyphens":"none","hyphens":"none","padding":"1.5rem","margin":0,"overflow":"auto","borderRadius":0,"fontSize":"0.875rem"},"children":["$","code",null,{"style":{"whiteSpace":"pre","fontFamily":"ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace"},"children":[false,[["$","span","line-number--1",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"1.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[1]}],["$","span","code-segment-1",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\"build\""]}],["$","span","code-segment-2",{"className":"token","style":{"color":"hsl(35, 99%, 36%)"},"children":[":"]}],["$","span","code-segment-3",{"style":{},"children":[" "]}],["$","span","code-segment-4",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\"react-scripts build\""]}],["$","span","code-segment-5",{"style":{},"children":[","]}]]]}]}]}],"\n","$L3","\n","$L4","\n","$L5","\n","$L6","\n","$L7","\n","$L8","\n","$L9","\n","$La","\n","$Lb","\n","$Lc","\n","$Ld","\n","$Le","\n","$Lf","\n","$L10","\n","$L11","\n","$L12","\n","$L13","\n","$L14","\n","$L15","\n","$L16","\n","$L17","\n","$L18","\n","$L19","\n","$L1a","\n","$L1b","\n","$L1c","\n","$L1d","\n","$L1e","\n","$L1f","\n","$L20","\n","$L21","\n","$L22","\n","$L23","\n","$L24"]}]]}]]}],null,"$L25"]}],"loading":null,"isPartial":false}
+3:["$","p","p-4",{"className":"mb-4 text-lg leading-relaxed","children":"在项目根目录中写一个脚本用于打包文件：build.sh："}]
+26:T589,## 打包的脚本（只展示必要步骤）
+#!/usr/bin/env bash
+
+## 接受 ENV
+env=$1
+
+## 这里可以区分开发和线上的不同env配置文件，一般是请求的资源和API的url不同
+if [ $env = "pre" ];then
+    cp .env_pre .env
+elif [ $env = "prod" ];then
+    cp .env_prod .env
+else
+    exit 1
+fi
+
+# yarn打包
+yarn build
+
+# 打包docker镜像
+# 默认推送到 hub.xxx.com/ops
+
+time=$(date "+%Y%m%d%H%M%S")
+tag="$time"
+
+app_name=ops"_""$env"
+default_registry=hub.xxx.com
+default_project=ops
+default_user=admin
+default_pwd=xxxxxxxx
+dockerfile=Dockerfile
+nginx_conf="./scripts/nginx_""$env"".conf"
+
+echo $(date "+%Y-%m-%d %H:%M:%S")-开始制作镜像
+docker build --platform linux/amd64 --rm --build-arg NGINX_CONF=$nginx_conf -t $app_name:latest . 
+echo $(date "+%Y-%m-%d %H:%M:%S")-镜像制作完成
+
+echo $(date "+%Y-%m-%d %H:%M:%S")-开始打tag
+docker tag $app_name:latest $default_registry/$default_project/$app_name\:$tag
+echo $(date "+%Y-%m-%d %H:%M:%S")-打tag完成
+
+echo $(date "+%Y-%m-%d %H:%M:%S")-开始push镜像
+docker login -u $default_user -p $default_pwd $default_registry
+docker push $default_registry/$default_project/$app_name\:$tag
+echo $(date "+%Y-%m-%d %H:%M:%S")-push镜像完成
+
+echo $(date "+%Y-%m-%d %H:%M:%S")-删除本地镜像
+docker rmi $app_name\:latest
+docker rmi $default_registry/$default_project/$app_name\:$tag
+
+echo "执行发布脚本请输入tag："
+echo $tag
+4:["$","div","pre-1,code-0",{"className":"my-4 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] bg-white","children":["$","div",null,{"node":{"type":"element","tagName":"code","properties":{"className":["language-sh"]},"children":[{"type":"text","value":"$26"}],"position":{"start":{"line":20,"column":1,"offset":351},"end":{"line":72,"column":4,"offset":1577}}},"style":{"background":"#ffffff","color":"hsl(230, 8%, 24%)","fontFamily":"\"Fira Code\", \"Fira Mono\", Menlo, Consolas, \"DejaVu Sans Mono\", monospace","direction":"ltr","textAlign":"left","whiteSpace":"pre","wordSpacing":"normal","wordBreak":"normal","lineHeight":"1.5","MozTabSize":"2","OTabSize":"2","tabSize":"2","WebkitHyphens":"none","MozHyphens":"none","msHyphens":"none","hyphens":"none","padding":"1.5rem","margin":0,"overflow":"auto","borderRadius":0,"fontSize":"0.875rem"},"children":["$","code",null,{"style":{"whiteSpace":"pre","fontFamily":"ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace"},"children":[false,[["$","span","line-number--1",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[1]}],["$","span","code-segment-1",{"className":"token","style":{"color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":["## 打包的脚本（只展示必要步骤）"]}],["$","span","code-segment-2",{"style":{},"children":["\n"]}],["$","span","line-number--2",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[2]}],["$","span","code-segment-4",{"style":{},"children":[""]}],["$","span","code-segment-5",{"className":"token","style":{"color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":["#!/usr/bin/env bash"]}],["$","span","code-segment-6",{"style":{},"children":["\n"]}],["$","span","line-number--3",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[3]}],"\n",["$","span","line-number--4",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[4]}],["$","span","code-segment-10",{"style":{},"children":[""]}],["$","span","code-segment-11",{"className":"token","style":{"color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":["## 接受 ENV"]}],"$L27","$L28","$L29","$L2a","$L2b","$L2c","$L2d","$L2e","\n","$L2f","$L30","$L31","$L32","$L33","$L34","$L35","$L36","$L37","$L38","$L39","$L3a","$L3b","$L3c","$L3d","$L3e","$L3f","$L40","$L41","$L42","$L43","$L44","$L45","$L46","$L47","$L48","$L49","$L4a","$L4b","$L4c","$L4d","$L4e","$L4f","$L50","$L51","$L52","$L53","$L54","$L55","$L56","$L57","$L58","$L59","$L5a","$L5b","$L5c","$L5d","$L5e","$L5f","$L60","$L61","$L62","$L63","$L64","$L65","$L66","$L67","$L68","$L69","\n","$L6a","$L6b","$L6c","$L6d","$L6e","$L6f","$L70","$L71","$L72","\n","$L73","$L74","$L75","$L76","$L77","$L78","$L79","$L7a","$L7b","\n","$L7c","$L7d","$L7e","$L7f","$L80","$L81","$L82","$L83","$L84","$L85","$L86","$L87","$L88","$L89","$L8a","$L8b","$L8c","$L8d","$L8e","\n","$L8f","$L90","$L91","$L92","$L93","$L94","$L95","$L96","$L97","$L98","$L99","$L9a","$L9b","$L9c","$L9d","$L9e","$L9f","$La0","$La1","$La2","$La3","$La4","$La5","$La6","$La7","$La8","$La9","$Laa","$Lab","$Lac","$Lad","$Lae","$Laf","$Lb0","$Lb1","$Lb2","$Lb3","$Lb4","$Lb5","$Lb6","$Lb7","$Lb8","$Lb9","$Lba","$Lbb","$Lbc","$Lbd","$Lbe","$Lbf","$Lc0","$Lc1","$Lc2","$Lc3","$Lc4","$Lc5","$Lc6","$Lc7","$Lc8","$Lc9","$Lca","$Lcb","$Lcc","$Lcd","$Lce","$Lcf","$Ld0","$Ld1","$Ld2","$Ld3","$Ld4","$Ld5","$Ld6","$Ld7","$Ld8","$Ld9","$Lda","$Ldb","$Ldc","$Ldd","$Lde","$Ldf","$Le0","$Le1","$Le2","$Le3","$Le4","$Le5","$Le6","$Le7","$Le8","$Le9","$Lea","$Leb","$Lec","$Led","$Lee","$Lef","$Lf0","$Lf1","$Lf2","$Lf3","$Lf4","$Lf5","$Lf6","$Lf7","$Lf8","$Lf9","$Lfa","$Lfb","$Lfc","$Lfd","$Lfe","$Lff","$L100","$L101","$L102","$L103","$L104","$L105","$L106","$L107","$L108","$L109","$L10a","$L10b","$L10c","$L10d","$L10e","$L10f","$L110","$L111","$L112","$L113","$L114","$L115","$L116","$L117","$L118","$L119","$L11a","$L11b"]]}]}]}]
+5:["$","p","p-5",{"className":"mb-4 text-lg leading-relaxed","children":"其中 docker 的登录用户名密码需要自己配置即可。 Dockerfile如下："}]
+6:["$","code","pre-2,code-0",{"className":"bg-gray-100 px-1 py-0.5 rounded border border-black text-sm font-mono","node":{"type":"element","tagName":"code","properties":{},"children":[{"type":"text","value":"FROM nginx:1.19.1\nARG NGINX_CONF=\"\"\n\n# 服务器上资源的地址\nWORKDIR /data/ops\n\n# 往目录里拷贝打包的文件夹 build，这是最关键的一步\nADD build build\n\n# 这里在docker里执行了nginx配置，这里不使用默认配置\nCOPY ./scripts/run.sh ./\nCOPY \"${NGINX_CONF}\" /etc/nginx/conf.d/default.conf\n\nEXPOSE 80\nENTRYPOINT [\"sh\", \"./run.sh\"]  \n"}],"position":{"start":{"line":75,"column":1,"offset":1621},"end":{"line":91,"column":4,"offset":1896}}},"children":"FROM nginx:1.19.1\nARG NGINX_CONF=\"\"\n\n# 服务器上资源的地址\nWORKDIR /data/ops\n\n# 往目录里拷贝打包的文件夹 build，这是最关键的一步\nADD build build\n\n# 这里在docker里执行了nginx配置，这里不使用默认配置\nCOPY ./scripts/run.sh ./\nCOPY \"${NGINX_CONF}\" /etc/nginx/conf.d/default.conf\n\nEXPOSE 80\nENTRYPOINT [\"sh\", \"./run.sh\"]  \n"}]
+7:["$","p","p-6",{"className":"mb-4 text-lg leading-relaxed","children":"上边执行的 run.sh 脚本我这里是从客户端拷贝到了服务器上，当然也可以直接写在服务器中，其作用是启动docker镜像上的 nginx（安装目录 /etc/init.d/nginx，nginx配置这里省略）。run.sh 如下："}]
+8:["$","div","pre-3,code-0",{"className":"my-4 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] bg-white","children":["$","div",null,{"node":{"type":"element","tagName":"code","properties":{"className":["language-sh"]},"children":[{"type":"text","value":"#!/usr/bin/env bash\n\n#start udnr web...\n/etc/init.d/nginx start\n"}],"position":{"start":{"line":94,"column":1,"offset":2014},"end":{"line":99,"column":4,"offset":2087}}},"style":{"background":"#ffffff","color":"hsl(230, 8%, 24%)","fontFamily":"\"Fira Code\", \"Fira Mono\", Menlo, Consolas, \"DejaVu Sans Mono\", monospace","direction":"ltr","textAlign":"left","whiteSpace":"pre","wordSpacing":"normal","wordBreak":"normal","lineHeight":"1.5","MozTabSize":"2","OTabSize":"2","tabSize":"2","WebkitHyphens":"none","MozHyphens":"none","msHyphens":"none","hyphens":"none","padding":"1.5rem","margin":0,"overflow":"auto","borderRadius":0,"fontSize":"0.875rem"},"children":["$","code",null,{"style":{"whiteSpace":"pre","fontFamily":"ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace"},"children":[false,[["$","span","line-number--1",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"1.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[1]}],["$","span","code-segment-1",{"className":"token shebang","style":{"color":"hsl(5, 74%, 59%)"},"children":["#!/usr/bin/env bash"]}],["$","span","code-segment-2",{"style":{},"children":["\n"]}],["$","span","line-number--2",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"1.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[2]}],"\n",["$","span","line-number--3",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"1.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[3]}],["$","span","code-segment-6",{"style":{},"children":[""]}],["$","span","code-segment-7",{"className":"token","style":{"color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":["#start udnr web..."]}],["$","span","code-segment-8",{"style":{},"children":["\n"]}],["$","span","line-number--4",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"1.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[4]}],"/etc/init.d/nginx start"]]}]}]}]
+9:["$","p","p-7",{"className":"mb-4 text-lg leading-relaxed","children":["其中本地的 nginx配置文件 ",["$","code","code-0",{"className":"bg-gray-100 px-1 py-0.5 rounded border border-black text-sm font-mono","node":{"type":"element","tagName":"code","properties":{},"children":[{"type":"text","value":"nginx_conf=\"./scripts/nginx_\"\"$env\"\".conf\"","position":{"start":{"line":101,"column":17,"offset":2105},"end":{"line":101,"column":61,"offset":2149}}}],"position":{"start":{"line":101,"column":17,"offset":2105},"end":{"line":101,"column":61,"offset":2149}}},"children":"nginx_conf=\"./scripts/nginx_\"\"$env\"\".conf\""}]," 是用于 docker 容器内部的 nginx，覆盖默认配置。这里我配置了服务的请求路径以及开发环境和生产环境的请求API地址的反向代理，这里不过多展开："]}]
+a:["$","div","pre-4,code-0",{"className":"my-4 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] bg-white","children":["$","div",null,{"node":{"type":"element","tagName":"code","properties":{"className":["language-sh"]},"children":[{"type":"text","value":"## ./scripts/nginx_prod.conf 为例\nupstream dashboard {\n    server 10.69.164.xxx:21001;\n}\n\n...\n\nlocation / {\n    try_files   /index.html =404;\n    root        /data/ops/build;\n}\n\nlocation ~ .*.(js|gif|png|map|jpg|css|ico|html|less)$ {\n    root            /data/ops/build;\n    proxy_redirect  off;\n    expires         30d;\n    error_page 405  =200 http://$host$request_uri;\n}\n\nlocation /dashboard {\n    proxy_pass         http://dashboard/;\n    proxy_set_header   Host $Host;\n}\n"}],"position":{"start":{"line":103,"column":1,"offset":2228},"end":{"line":127,"column":4,"offset":2711}}},"style":{"background":"#ffffff","color":"hsl(230, 8%, 24%)","fontFamily":"\"Fira Code\", \"Fira Mono\", Menlo, Consolas, \"DejaVu Sans Mono\", monospace","direction":"ltr","textAlign":"left","whiteSpace":"pre","wordSpacing":"normal","wordBreak":"normal","lineHeight":"1.5","MozTabSize":"2","OTabSize":"2","tabSize":"2","WebkitHyphens":"none","MozHyphens":"none","msHyphens":"none","hyphens":"none","padding":"1.5rem","margin":0,"overflow":"auto","borderRadius":0,"fontSize":"0.875rem"},"children":["$","code",null,{"style":{"whiteSpace":"pre","fontFamily":"ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace"},"children":[false,[["$","span","line-number--1",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[1]}],["$","span","code-segment-1",{"className":"token","style":{"color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":["## ./scripts/nginx_prod.conf 为例"]}],["$","span","code-segment-2",{"style":{},"children":["\n"]}],["$","span","line-number--2",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[2]}],["$","span","code-segment-4",{"style":{},"children":["upstream dashboard "]}],["$","span","code-segment-5",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":["{"]}],["$","span","code-segment-6",{"style":{},"children":["\n"]}],["$","span","line-number--3",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[3]}],["$","span","code-segment-8",{"style":{},"children":["    server "]}],["$","span","code-segment-9",{"className":"token","style":{"color":"hsl(35, 99%, 36%)"},"children":["10.69"]}],["$","span","code-segment-10",{"style":{},"children":[".164.xxx:21001"]}],["$","span","code-segment-11",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":[";"]}],["$","span","code-segment-12",{"style":{},"children":["\n"]}],["$","span","line-number--4",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[4]}],["$","span","code-segment-14",{"style":{},"children":[""]}],["$","span","code-segment-15",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":["}"]}],["$","span","code-segment-16",{"style":{},"children":["\n"]}],["$","span","line-number--5",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[5]}],"\n",["$","span","line-number--6",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[6]}],"$L11c","$L11d","$L11e","$L11f","\n","$L120","$L121","$L122","$L123","$L124","$L125","$L126","$L127","$L128","$L129","$L12a","$L12b","$L12c","$L12d","$L12e","$L12f","$L130","$L131","$L132","\n","$L133","$L134","$L135","$L136","$L137","$L138","$L139","$L13a","$L13b","$L13c","$L13d","$L13e","$L13f","$L140","$L141","$L142","$L143","$L144","$L145","$L146","$L147","$L148","$L149","$L14a","$L14b","$L14c","$L14d","$L14e","$L14f","$L150","$L151","$L152","$L153","$L154","$L155","$L156","$L157","$L158","$L159","$L15a","$L15b","$L15c","$L15d","$L15e","$L15f","$L160","$L161","$L162","$L163","$L164","$L165","$L166","\n","$L167","$L168","$L169","$L16a","$L16b","$L16c","$L16d","$L16e","$L16f","$L170","$L171","$L172","$L173","$L174","$L175","$L176"]]}]}]}]
+b:["$","p","p-8",{"className":"mb-4 text-lg leading-relaxed","children":"build.sh 脚本执行完毕后，会生成一个挂载了项目build资源的Docker镜像，并输出了其 Tag。"}]
+c:["$","ul","ul-1",{"className":"ml-4 list-disc mb-4","children":["\n",["$","li","li-0",{"className":"font-bold mb-2","children":"接下来我们来部署这个 docker 镜像"}],"\n"]}]
+d:["$","p","p-9",{"className":"mb-4 text-lg leading-relaxed","children":"刚刚的操作都是在客户端操作的（可以手动执行脚本，也可以写在CI里）。现在我们登录服务器："}]
+e:["$","div","pre-5,code-0",{"className":"my-4 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] bg-white","children":["$","div",null,{"node":{"type":"element","tagName":"code","properties":{"className":["language-sh"]},"children":[{"type":"text","value":"ssh root@172.xx.xxx.72\n\ncd /data/ops/\n"}],"position":{"start":{"line":135,"column":1,"offset":2839},"end":{"line":139,"column":4,"offset":2886}}},"style":{"background":"#ffffff","color":"hsl(230, 8%, 24%)","fontFamily":"\"Fira Code\", \"Fira Mono\", Menlo, Consolas, \"DejaVu Sans Mono\", monospace","direction":"ltr","textAlign":"left","whiteSpace":"pre","wordSpacing":"normal","wordBreak":"normal","lineHeight":"1.5","MozTabSize":"2","OTabSize":"2","tabSize":"2","WebkitHyphens":"none","MozHyphens":"none","msHyphens":"none","hyphens":"none","padding":"1.5rem","margin":0,"overflow":"auto","borderRadius":0,"fontSize":"0.875rem"},"children":["$","code",null,{"style":{"whiteSpace":"pre","fontFamily":"ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace"},"children":[false,[["$","span","line-number--1",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"1.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[1]}],["$","span","code-segment-1",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["ssh"]}],["$","span","code-segment-2",{"style":{},"children":[" root@172.xx.xxx.72\n"]}],["$","span","line-number--2",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"1.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[2]}],"\n",["$","span","line-number--3",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"1.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[3]}],["$","span","code-segment-6",{"style":{},"children":[""]}],["$","span","code-segment-7",{"className":"token","style":{"color":"hsl(35, 99%, 36%)"},"children":["cd"]}],["$","span","code-segment-8",{"style":{},"children":[" /data/ops/"]}]]]}]}]}]
+f:["$","p","p-10",{"className":"mb-4 text-lg leading-relaxed","children":"其中 deploy.sh："}]
+10:["$","div","pre-6,code-0",{"className":"my-4 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] bg-white","children":["$","div",null,{"node":{"type":"element","tagName":"code","properties":{"className":["language-sh"]},"children":[{"type":"text","value":"#!/bin/bash\nif [ ! -n \"$1\" ]\nthen\necho \"You should give me a image tag.\"\nelse\necho \"The image tag is $1\"\n\noldtag=`cat .env`\n\n## 获取上一次成功的tag，便于在打包失败时及时回退\necho \"The old image tag is $oldtag\"\n\npath=$(pwd)\n\n# 记录新的tag到容器的.env中\nsed -i \"s/$oldtag/TAG=$1/g\" $path/.env\n\n# docker-compose config\ndocker login -u ops -p 你的密码 hub.xxx.com\n# 重新启动容器，因为 build 文件夹替换了，所以是最新的打包信息\ndocker-compose up -d\n\nfi\n"}],"position":{"start":{"line":143,"column":1,"offset":2903},"end":{"line":167,"column":4,"offset":3299}}},"style":{"background":"#ffffff","color":"hsl(230, 8%, 24%)","fontFamily":"\"Fira Code\", \"Fira Mono\", Menlo, Consolas, \"DejaVu Sans Mono\", monospace","direction":"ltr","textAlign":"left","whiteSpace":"pre","wordSpacing":"normal","wordBreak":"normal","lineHeight":"1.5","MozTabSize":"2","OTabSize":"2","tabSize":"2","WebkitHyphens":"none","MozHyphens":"none","msHyphens":"none","hyphens":"none","padding":"1.5rem","margin":0,"overflow":"auto","borderRadius":0,"fontSize":"0.875rem"},"children":["$","code",null,{"style":{"whiteSpace":"pre","fontFamily":"ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace"},"children":[false,[["$","span","line-number--1",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[1]}],["$","span","code-segment-1",{"className":"token shebang","style":{"color":"hsl(5, 74%, 59%)"},"children":["#!/bin/bash"]}],["$","span","code-segment-2",{"style":{},"children":["\n"]}],["$","span","line-number--2",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[2]}],["$","span","code-segment-4",{"style":{},"children":[""]}],["$","span","code-segment-5",{"className":"token","style":{"color":"hsl(301, 63%, 40%)"},"children":["if"]}],["$","span","code-segment-6",{"style":{},"children":[" "]}],["$","span","code-segment-7",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":["["]}],["$","span","code-segment-8",{"style":{},"children":[" "]}],["$","span","code-segment-9",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["!"]}],["$","span","code-segment-10",{"style":{},"children":[" "]}],["$","span","code-segment-11",{"className":"token parameter","style":{"color":"hsl(221, 87%, 60%)"},"children":["-n"]}],["$","span","code-segment-12",{"style":{},"children":[" "]}],["$","span","code-segment-13",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\""]}],["$","span","code-segment-14",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$1"]}],["$","span","code-segment-15",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\""]}],["$","span","code-segment-16",{"style":{},"children":[" "]}],["$","span","code-segment-17",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":["]"]}],["$","span","code-segment-18",{"style":{},"children":["\n"]}],["$","span","line-number--3",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[3]}],["$","span","code-segment-20",{"style":{},"children":[""]}],["$","span","code-segment-21",{"className":"token","style":{"color":"hsl(301, 63%, 40%)"},"children":["then"]}],["$","span","code-segment-22",{"style":{},"children":["\n"]}],["$","span","line-number--4",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[4]}],["$","span","code-segment-24",{"style":{},"children":[""]}],["$","span","code-segment-25",{"className":"token","style":{"color":"hsl(35, 99%, 36%)"},"children":["echo"]}],"$L177","$L178","$L179","$L17a","$L17b","$L17c","$L17d","$L17e","$L17f","$L180","$L181","$L182","$L183","$L184","$L185","$L186","\n","$L187","$L188","$L189","$L18a","$L18b","$L18c","$L18d","$L18e","$L18f","$L190","\n","$L191","$L192","$L193","$L194","$L195","$L196","$L197","$L198","$L199","$L19a","$L19b","$L19c","$L19d","\n","$L19e","$L19f","$L1a0","$L1a1","$L1a2","$L1a3","$L1a4","$L1a5","$L1a6","\n","$L1a7","$L1a8","$L1a9","$L1aa","$L1ab","$L1ac","$L1ad","$L1ae","$L1af","$L1b0","$L1b1","$L1b2","$L1b3","$L1b4","$L1b5","$L1b6","$L1b7","$L1b8","$L1b9","\n","$L1ba","$L1bb","$L1bc","$L1bd","$L1be","$L1bf","$L1c0","$L1c1","$L1c2","$L1c3","$L1c4","$L1c5","$L1c6","$L1c7","$L1c8","$L1c9","$L1ca","$L1cb","$L1cc","$L1cd","$L1ce","$L1cf","$L1d0","\n","$L1d1","$L1d2","$L1d3"]]}]}]}]
+11:["$","p","p-11",{"className":"mb-4 text-lg leading-relaxed","children":"现在在服务器上执行："}]
+12:["$","div","pre-7,code-0",{"className":"my-4 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] bg-white","children":["$","div",null,{"node":{"type":"element","tagName":"code","properties":{"className":["language-sh"]},"children":[{"type":"text","value":"sh deploy.sh tag名称\n"}],"position":{"start":{"line":171,"column":1,"offset":3313},"end":{"line":173,"column":4,"offset":3341}}},"style":{"background":"#ffffff","color":"hsl(230, 8%, 24%)","fontFamily":"\"Fira Code\", \"Fira Mono\", Menlo, Consolas, \"DejaVu Sans Mono\", monospace","direction":"ltr","textAlign":"left","whiteSpace":"pre","wordSpacing":"normal","wordBreak":"normal","lineHeight":"1.5","MozTabSize":"2","OTabSize":"2","tabSize":"2","WebkitHyphens":"none","MozHyphens":"none","msHyphens":"none","hyphens":"none","padding":"1.5rem","margin":0,"overflow":"auto","borderRadius":0,"fontSize":"0.875rem"},"children":["$","code",null,{"style":{"whiteSpace":"pre","fontFamily":"ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace"},"children":[false,[["$","span","line-number--1",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"1.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[1]}],["$","span","code-segment-1",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["sh"]}],["$","span","code-segment-2",{"style":{},"children":[" deploy.sh tag名称"]}]]]}]}]}]
+13:["$","p","p-12",{"className":"mb-4 text-lg leading-relaxed","children":"此时在服务器上就启动起来了一个前端单页应用了，可以通过ip+端口号来访问了。"}]
+14:["$","h2","h2-1",{"className":"text-2xl font-bold mt-6 mb-3 border-l-4 border-yellow-400 pl-4","children":"2. 部署SSR应用"}]
+15:["$","p","p-13",{"className":"mb-4 text-lg leading-relaxed","children":"SSR前端框架我们以 nextjs 为例来讲一下如何与 docker 结合部署。"}]
+16:["$","ul","ul-2",{"className":"ml-4 list-disc mb-4","children":["\n",["$","li","li-0",{"className":"font-bold mb-2","children":"首先来部署打包应用"}],"\n"]}]
+17:["$","p","p-14",{"className":"mb-4 text-lg leading-relaxed","children":"假设项目的 package.json是这么写的："}]
+18:["$","div","pre-8,code-0",{"className":"my-4 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] bg-white","children":["$","div",null,{"node":{"type":"element","tagName":"code","properties":{"className":["language-json"]},"children":[{"type":"text","value":"\"scripts\": {\n    \"build\": \"next build --profile\",\n    \"start\": \"next start\",\n}\n"}],"position":{"start":{"line":185,"column":1,"offset":3479},"end":{"line":190,"column":4,"offset":3569}}},"style":{"background":"#ffffff","color":"hsl(230, 8%, 24%)","fontFamily":"\"Fira Code\", \"Fira Mono\", Menlo, Consolas, \"DejaVu Sans Mono\", monospace","direction":"ltr","textAlign":"left","whiteSpace":"pre","wordSpacing":"normal","wordBreak":"normal","lineHeight":"1.5","MozTabSize":"2","OTabSize":"2","tabSize":"2","WebkitHyphens":"none","MozHyphens":"none","msHyphens":"none","hyphens":"none","padding":"1.5rem","margin":0,"overflow":"auto","borderRadius":0,"fontSize":"0.875rem"},"children":["$","code",null,{"style":{"whiteSpace":"pre","fontFamily":"ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace"},"children":[false,[["$","span","line-number--1",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"1.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[1]}],["$","span","code-segment-1",{"className":"token","style":{"color":"hsl(5, 74%, 59%)"},"children":["\"scripts\""]}],["$","span","code-segment-2",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":[":"]}],["$","span","code-segment-3",{"style":{},"children":[" "]}],["$","span","code-segment-4",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":["{"]}],["$","span","code-segment-5",{"style":{},"children":["\n"]}],["$","span","line-number--2",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"1.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[2]}],["$","span","code-segment-7",{"style":{},"children":["    "]}],["$","span","code-segment-8",{"className":"token","style":{"color":"hsl(5, 74%, 59%)"},"children":["\"build\""]}],["$","span","code-segment-9",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":[":"]}],["$","span","code-segment-10",{"style":{},"children":[" "]}],["$","span","code-segment-11",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\"next build --profile\""]}],["$","span","code-segment-12",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":[","]}],["$","span","code-segment-13",{"style":{},"children":["\n"]}],["$","span","line-number--3",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"1.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[3]}],["$","span","code-segment-15",{"style":{},"children":["    "]}],["$","span","code-segment-16",{"className":"token","style":{"color":"hsl(5, 74%, 59%)"},"children":["\"start\""]}],["$","span","code-segment-17",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":[":"]}],["$","span","code-segment-18",{"style":{},"children":[" "]}],["$","span","code-segment-19",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\"next start\""]}],["$","span","code-segment-20",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":[","]}],["$","span","code-segment-21",{"style":{},"children":["\n"]}],["$","span","line-number--4",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"1.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[4]}],["$","span","code-segment-23",{"style":{},"children":[""]}],["$","span","code-segment-24",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":["}"]}]]]}]}]}]
+19:["$","p","p-15",{"className":"mb-4 text-lg leading-relaxed","children":["nextjs部署到服务器时，需要先 ",["$","code","code-0",{"className":"bg-gray-100 px-1 py-0.5 rounded border border-black text-sm font-mono","node":{"type":"element","tagName":"code","properties":{},"children":[{"type":"text","value":"yarn build","position":{"start":{"line":191,"column":19,"offset":3588},"end":{"line":191,"column":31,"offset":3600}}}],"position":{"start":{"line":191,"column":19,"offset":3588},"end":{"line":191,"column":31,"offset":3600}}},"children":"yarn build"}],"，然后在打好包的 .next 同目录上执行 ",["$","code","code-1",{"className":"bg-gray-100 px-1 py-0.5 rounded border border-black text-sm font-mono","node":{"type":"element","tagName":"code","properties":{},"children":[{"type":"text","value":"yarn start","position":{"start":{"line":191,"column":53,"offset":3622},"end":{"line":191,"column":65,"offset":3634}}}],"position":{"start":{"line":191,"column":53,"offset":3622},"end":{"line":191,"column":65,"offset":3634}}},"children":"yarn start"}]," 以此来启动一个小型的SSR直出服务器。"]}]
+1a:["$","p","p-16",{"className":"mb-4 text-lg leading-relaxed","children":"明白了这个后，我们首先来打包。打包的操作除了写在shell里，也可以直接写在 Dockerfile 里："}]
+1d4:T53b,# 安装一些linux系统必须的依赖和配置环境，并为下一步build安装node_modules
+FROM node:16-alpine AS deps
+RUN apk add --no-cache libc6-compat
+WORKDIR /app
+COPY package.json yarn.lock ./
+RUN yarn install --frozen-lockfile
+
+# 拷贝打包需要的资源，执行build。默认的，build完后，当前目录下会有一个.next目录生成
+FROM node:alpine AS builder
+WORKDIR /app
+COPY . .
+COPY --from=deps /app/node_modules ./node_modules
+RUN yarn build && yarn install --production --ignore-scripts --prefer-offline
+
+# 添加用户组
+FROM node:alpine AS runner
+WORKDIR /app
+
+ENV NODE_ENV production
+RUN addgroup -g 1001 -S nodejs
+RUN adduser -S nextjs -u 1001
+
+# 打包以后，一些配置文件在打包的目录下没有，需要手动copy
+COPY --from=builder /app/next.config.js ./                      # next的配置文件
+COPY --from=builder /app/next-i18next.config.js ./              # 如果需要next-i18next支持，这里也需要拷贝自己在根目录放置的配置文件
+
+COPY --from=builder --chown=nextjs:nodejs /app/public ./public  # 公共资源
+COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next    # 打包后的源代码
+COPY --from=builder /app/node_modules ./node_modules            # 安装好的依赖
+COPY --from=builder /app/package.json ./package.json            # 包信息
+1d5:T53b,# 安装一些linux系统必须的依赖和配置环境，并为下一步build安装node_modules
+FROM node:16-alpine AS deps
+RUN apk add --no-cache libc6-compat
+WORKDIR /app
+COPY package.json yarn.lock ./
+RUN yarn install --frozen-lockfile
+
+# 拷贝打包需要的资源，执行build。默认的，build完后，当前目录下会有一个.next目录生成
+FROM node:alpine AS builder
+WORKDIR /app
+COPY . .
+COPY --from=deps /app/node_modules ./node_modules
+RUN yarn build && yarn install --production --ignore-scripts --prefer-offline
+
+# 添加用户组
+FROM node:alpine AS runner
+WORKDIR /app
+
+ENV NODE_ENV production
+RUN addgroup -g 1001 -S nodejs
+RUN adduser -S nextjs -u 1001
+
+# 打包以后，一些配置文件在打包的目录下没有，需要手动copy
+COPY --from=builder /app/next.config.js ./                      # next的配置文件
+COPY --from=builder /app/next-i18next.config.js ./              # 如果需要next-i18next支持，这里也需要拷贝自己在根目录放置的配置文件
+
+COPY --from=builder --chown=nextjs:nodejs /app/public ./public  # 公共资源
+COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next    # 打包后的源代码
+COPY --from=builder /app/node_modules ./node_modules            # 安装好的依赖
+COPY --from=builder /app/package.json ./package.json            # 包信息
+1b:["$","code","pre-9,code-0",{"className":"bg-gray-100 px-1 py-0.5 rounded border border-black text-sm font-mono","node":{"type":"element","tagName":"code","properties":{},"children":[{"type":"text","value":"$1d4"}],"position":{"start":{"line":195,"column":1,"offset":3710},"end":{"line":226,"column":4,"offset":4778}}},"children":"$1d5"}]
+1c:["$","p","p-17",{"className":"mb-4 text-lg leading-relaxed","children":"可以看到 docker 是很强大的，一个文件就把依赖安装、build和资源拷贝完成了。"}]
+1d:["$","ul","ul-3",{"className":"ml-4 list-disc mb-4","children":["\n",["$","li","li-0",{"className":"font-bold mb-2","children":"接下来是启动打包的项目"}],"\n"]}]
+1e:["$","p","p-18",{"className":"mb-4 text-lg leading-relaxed","children":["由于nextjs内置的node服务，直接可以 ",["$","code","code-0",{"className":"bg-gray-100 px-1 py-0.5 rounded border border-black text-sm font-mono","node":{"type":"element","tagName":"code","properties":{},"children":[{"type":"text","value":"next start","position":{"start":{"line":232,"column":24,"offset":4863},"end":{"line":232,"column":36,"offset":4875}}}],"position":{"start":{"line":232,"column":24,"offset":4863},"end":{"line":232,"column":36,"offset":4875}}},"children":"next start"}]," 启动，故不需要额外配置 nginx。可以在上边的Dockerfile 里追加启动的指令："]}]
+1f:["$","code","pre-10,code-0",{"className":"bg-gray-100 px-1 py-0.5 rounded border border-black text-sm font-mono","node":{"type":"element","tagName":"code","properties":{},"children":[{"type":"text","value":"# 使用刚刚添加的用户\nUSER nextjs\n\n# 暴露docker端口3000\nEXPOSE 3000\n\nENV PORT 3000\n\n# 执行 yarn start\nCMD [\"yarn\", \"start\"]\n"}],"position":{"start":{"line":234,"column":1,"offset":4922},"end":{"line":245,"column":4,"offset":5037}}},"children":"# 使用刚刚添加的用户\nUSER nextjs\n\n# 暴露docker端口3000\nEXPOSE 3000\n\nENV PORT 3000\n\n# 执行 yarn start\nCMD [\"yarn\", \"start\"]\n"}]
+20:["$","p","p-19",{"className":"mb-4 text-lg leading-relaxed","children":"到此，一个 nextjs 应用就在服务器的 3000 端口启动起来了。"}]
+21:["$","hr","hr-0",{}]
+22:["$","p","p-20",{"className":"mb-4 text-lg leading-relaxed","children":"流程总结如下："}]
+23:["$","ol","ol-0",{"className":"ml-4 list-decimal mb-4","children":["\n",["$","li","li-0",{"className":"font-bold mb-2","children":"使用docker或者shell进行打包，获取打包的资源文件目录"}],"\n",["$","li","li-1",{"className":"font-bold mb-2","children":"将资源文件、配置项、依赖等拷贝到docker容器中自定义的工作目录下"}],"\n",["$","li","li-2",{"className":"font-bold mb-2","children":"在docker该工作目录下执行指令启动docker中的nginx或者其他的服务器"}],"\n"]}]
+24:["$","p","p-21",{"className":"mb-4 text-lg leading-relaxed","children":"到这里，前端项目部署就完成了，是不是很简单？如果想要看与CI/CD结合的自动化部署流程，可以看我之前讲述 gitlab CI 的文章。"}]
+25:["$","$L1d6",null,{"children":["$","$1d7",null,{"name":"Next.MetadataOutlet","children":"$@1d8"}]}]
+27:["$","span","code-segment-12",{"style":{},"children":["\n"]}]
+28:["$","span","line-number--5",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[5]}]
+29:["$","span","code-segment-14",{"style":{},"children":[""]}]
+2a:["$","span","code-segment-15",{"className":"token assign-left","style":{"color":"hsl(221, 87%, 60%)"},"children":["env"]}]
+2b:["$","span","code-segment-16",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["="]}]
+2c:["$","span","code-segment-17",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$1"]}]
+2d:["$","span","code-segment-18",{"style":{},"children":["\n"]}]
+2e:["$","span","line-number--6",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[6]}]
+2f:["$","span","line-number--7",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[7]}]
+30:["$","span","code-segment-22",{"style":{},"children":[""]}]
+31:["$","span","code-segment-23",{"className":"token","style":{"color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":["## 这里可以区分开发和线上的不同env配置文件，一般是请求的资源和API的url不同"]}]
+32:["$","span","code-segment-24",{"style":{},"children":["\n"]}]
+33:["$","span","line-number--8",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[8]}]
+34:["$","span","code-segment-26",{"style":{},"children":[""]}]
+35:["$","span","code-segment-27",{"className":"token","style":{"color":"hsl(301, 63%, 40%)"},"children":["if"]}]
+36:["$","span","code-segment-28",{"style":{},"children":[" "]}]
+37:["$","span","code-segment-29",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":["["]}]
+38:["$","span","code-segment-30",{"style":{},"children":[" "]}]
+39:["$","span","code-segment-31",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$env"]}]
+3a:["$","span","code-segment-32",{"style":{},"children":[" "]}]
+3b:["$","span","code-segment-33",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["="]}]
+3c:["$","span","code-segment-34",{"style":{},"children":[" "]}]
+3d:["$","span","code-segment-35",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\"pre\""]}]
+3e:["$","span","code-segment-36",{"style":{},"children":[" "]}]
+3f:["$","span","code-segment-37",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":["]"]}]
+40:["$","span","code-segment-38",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":[";"]}]
+41:["$","span","code-segment-39",{"className":"token","style":{"color":"hsl(301, 63%, 40%)"},"children":["then"]}]
+42:["$","span","code-segment-40",{"style":{},"children":["\n"]}]
+43:["$","span","line-number--9",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[9]}]
+44:["$","span","code-segment-42",{"style":{},"children":["    "]}]
+45:["$","span","code-segment-43",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["cp"]}]
+46:["$","span","code-segment-44",{"style":{},"children":[" .env_pre .env\n"]}]
+47:["$","span","line-number--10",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[10]}]
+48:["$","span","code-segment-46",{"style":{},"children":[""]}]
+49:["$","span","code-segment-47",{"className":"token","style":{"color":"hsl(301, 63%, 40%)"},"children":["elif"]}]
+4a:["$","span","code-segment-48",{"style":{},"children":[" "]}]
+4b:["$","span","code-segment-49",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":["["]}]
+4c:["$","span","code-segment-50",{"style":{},"children":[" "]}]
+4d:["$","span","code-segment-51",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$env"]}]
+4e:["$","span","code-segment-52",{"style":{},"children":[" "]}]
+4f:["$","span","code-segment-53",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["="]}]
+50:["$","span","code-segment-54",{"style":{},"children":[" "]}]
+51:["$","span","code-segment-55",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\"prod\""]}]
+52:["$","span","code-segment-56",{"style":{},"children":[" "]}]
+53:["$","span","code-segment-57",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":["]"]}]
+54:["$","span","code-segment-58",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":[";"]}]
+55:["$","span","code-segment-59",{"className":"token","style":{"color":"hsl(301, 63%, 40%)"},"children":["then"]}]
+56:["$","span","code-segment-60",{"style":{},"children":["\n"]}]
+57:["$","span","line-number--11",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[11]}]
+58:["$","span","code-segment-62",{"style":{},"children":["    "]}]
+59:["$","span","code-segment-63",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["cp"]}]
+5a:["$","span","code-segment-64",{"style":{},"children":[" .env_prod .env\n"]}]
+5b:["$","span","line-number--12",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[12]}]
+5c:["$","span","code-segment-66",{"style":{},"children":[""]}]
+5d:["$","span","code-segment-67",{"className":"token","style":{"color":"hsl(301, 63%, 40%)"},"children":["else"]}]
+5e:["$","span","code-segment-68",{"style":{},"children":["\n"]}]
+5f:["$","span","line-number--13",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[13]}]
+60:["$","span","code-segment-70",{"style":{},"children":["    "]}]
+61:["$","span","code-segment-71",{"className":"token","style":{"color":"hsl(35, 99%, 36%)"},"children":["exit"]}]
+62:["$","span","code-segment-72",{"style":{},"children":[" "]}]
+63:["$","span","code-segment-73",{"className":"token","style":{"color":"hsl(35, 99%, 36%)"},"children":["1"]}]
+64:["$","span","code-segment-74",{"style":{},"children":["\n"]}]
+65:["$","span","line-number--14",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[14]}]
+66:["$","span","code-segment-76",{"style":{},"children":[""]}]
+67:["$","span","code-segment-77",{"className":"token","style":{"color":"hsl(301, 63%, 40%)"},"children":["fi"]}]
+68:["$","span","code-segment-78",{"style":{},"children":["\n"]}]
+69:["$","span","line-number--15",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[15]}]
+6a:["$","span","line-number--16",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[16]}]
+6b:["$","span","code-segment-82",{"style":{},"children":[""]}]
+6c:["$","span","code-segment-83",{"className":"token","style":{"color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":["# yarn打包"]}]
+6d:["$","span","code-segment-84",{"style":{},"children":["\n"]}]
+6e:["$","span","line-number--17",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[17]}]
+6f:["$","span","code-segment-86",{"style":{},"children":[""]}]
+70:["$","span","code-segment-87",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["yarn"]}]
+71:["$","span","code-segment-88",{"style":{},"children":[" build\n"]}]
+72:["$","span","line-number--18",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[18]}]
+73:["$","span","line-number--19",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[19]}]
+74:["$","span","code-segment-92",{"style":{},"children":[""]}]
+75:["$","span","code-segment-93",{"className":"token","style":{"color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":["# 打包docker镜像"]}]
+76:["$","span","code-segment-94",{"style":{},"children":["\n"]}]
+77:["$","span","line-number--20",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[20]}]
+78:["$","span","code-segment-96",{"style":{},"children":[""]}]
+79:["$","span","code-segment-97",{"className":"token","style":{"color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":["# 默认推送到 hub.xxx.com/ops"]}]
+7a:["$","span","code-segment-98",{"style":{},"children":["\n"]}]
+7b:["$","span","line-number--21",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[21]}]
+7c:["$","span","line-number--22",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[22]}]
+7d:["$","span","code-segment-102",{"style":{},"children":[""]}]
+7e:["$","span","code-segment-103",{"className":"token assign-left","style":{"color":"hsl(221, 87%, 60%)"},"children":["time"]}]
+7f:["$","span","code-segment-104",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["="]}]
+80:["$","span","code-segment-105",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$("]}]
+81:["$","span","code-segment-106",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["date"]}]
+82:["$","span","code-segment-107",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":[" "]}]
+83:["$","span","code-segment-108",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\"+%Y%m%d%H%M%S\""]}]
+84:["$","span","code-segment-109",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":[")"]}]
+85:["$","span","code-segment-110",{"style":{},"children":["\n"]}]
+86:["$","span","line-number--23",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[23]}]
+87:["$","span","code-segment-112",{"style":{},"children":[""]}]
+88:["$","span","code-segment-113",{"className":"token assign-left","style":{"color":"hsl(221, 87%, 60%)"},"children":["tag"]}]
+89:["$","span","code-segment-114",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["="]}]
+8a:["$","span","code-segment-115",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\""]}]
+8b:["$","span","code-segment-116",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$time"]}]
+8c:["$","span","code-segment-117",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\""]}]
+8d:["$","span","code-segment-118",{"style":{},"children":["\n"]}]
+8e:["$","span","line-number--24",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[24]}]
+8f:["$","span","line-number--25",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[25]}]
+90:["$","span","code-segment-122",{"style":{},"children":[""]}]
+91:["$","span","code-segment-123",{"className":"token assign-left","style":{"color":"hsl(221, 87%, 60%)"},"children":["app_name"]}]
+92:["$","span","code-segment-124",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["="]}]
+93:["$","span","code-segment-125",{"style":{},"children":["ops"]}]
+94:["$","span","code-segment-126",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\"_\""]}]
+95:["$","span","code-segment-127",{"style":{},"children":["\""]}]
+96:["$","span","code-segment-128",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$env"]}]
+97:["$","span","code-segment-129",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\"\n"]}]
+98:["$","span","code-segment-130",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":[["$","span","line-number--26",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[26]}],"default_registry=hub.xxx.com\n"]}]
+99:["$","span","code-segment-131",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":[["$","span","line-number--27",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[27]}],"default_project=ops\n"]}]
+9a:["$","span","code-segment-132",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":[["$","span","line-number--28",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[28]}],"default_user=admin\n"]}]
+9b:["$","span","code-segment-133",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":[["$","span","line-number--29",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[29]}],"default_pwd=xxxxxxxx\n"]}]
+9c:["$","span","code-segment-134",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":[["$","span","line-number--30",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[30]}],"dockerfile=Dockerfile\n"]}]
+9d:["$","span","line-number--31",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[31]}]
+9e:["$","span","code-segment-136",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["nginx_conf=\""]}]
+9f:["$","span","code-segment-137",{"style":{},"children":["./scripts/nginx_"]}]
+a0:["$","span","code-segment-138",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\"\""]}]
+a1:["$","span","code-segment-139",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$env"]}]
+a2:["$","span","code-segment-140",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\"\""]}]
+a3:["$","span","code-segment-141",{"style":{},"children":[".conf"]}]
+a4:["$","span","code-segment-142",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\"\n"]}]
+a5:["$","span","code-segment-143",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":[["$","span","line-number--32",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[32]}],"\n"]}]
+a6:["$","span","line-number--33",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[33]}]
+a7:["$","span","code-segment-145",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["echo "]}]
+a8:["$","span","code-segment-146",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$("]}]
+a9:["$","span","code-segment-147",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["date"]}]
+aa:["$","span","code-segment-148",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":[" "]}]
+ab:["$","span","code-segment-149",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["\"+%Y-%m-%d %H:%M:%S\""]}]
+ac:["$","span","code-segment-150",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":[")"]}]
+ad:["$","span","code-segment-151",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["-开始制作镜像\n"]}]
+ae:["$","span","line-number--34",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[34]}]
+af:["$","span","code-segment-153",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["docker build --platform linux/amd64 --rm --build-arg NGINX_CONF="]}]
+b0:["$","span","code-segment-154",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$nginx_conf"]}]
+b1:["$","span","code-segment-155",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":[" -t "]}]
+b2:["$","span","code-segment-156",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$app_name"]}]
+b3:["$","span","code-segment-157",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":[":latest . \n"]}]
+b4:["$","span","line-number--35",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[35]}]
+b5:["$","span","code-segment-159",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["echo "]}]
+b6:["$","span","code-segment-160",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$("]}]
+b7:["$","span","code-segment-161",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["date"]}]
+b8:["$","span","code-segment-162",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":[" "]}]
+b9:["$","span","code-segment-163",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["\"+%Y-%m-%d %H:%M:%S\""]}]
+ba:["$","span","code-segment-164",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":[")"]}]
+bb:["$","span","code-segment-165",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["-镜像制作完成\n"]}]
+bc:["$","span","code-segment-166",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":[["$","span","line-number--36",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[36]}],"\n"]}]
+bd:["$","span","line-number--37",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[37]}]
+be:["$","span","code-segment-168",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["echo "]}]
+bf:["$","span","code-segment-169",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$("]}]
+c0:["$","span","code-segment-170",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["date"]}]
+c1:["$","span","code-segment-171",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":[" "]}]
+c2:["$","span","code-segment-172",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["\"+%Y-%m-%d %H:%M:%S\""]}]
+c3:["$","span","code-segment-173",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":[")"]}]
+c4:["$","span","code-segment-174",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["-开始打tag\n"]}]
+c5:["$","span","line-number--38",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[38]}]
+c6:["$","span","code-segment-176",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["docker tag "]}]
+c7:["$","span","code-segment-177",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$app_name"]}]
+c8:["$","span","code-segment-178",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":[":latest "]}]
+c9:["$","span","code-segment-179",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$default_registry"]}]
+ca:["$","span","code-segment-180",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["/"]}]
+cb:["$","span","code-segment-181",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$default_project"]}]
+cc:["$","span","code-segment-182",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["/"]}]
+cd:["$","span","code-segment-183",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$app_name"]}]
+ce:["$","span","code-segment-184",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\\:"]}]
+cf:["$","span","code-segment-185",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$tag"]}]
+d0:["$","span","code-segment-186",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\n"]}]
+d1:["$","span","line-number--39",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[39]}]
+d2:["$","span","code-segment-188",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["echo "]}]
+d3:["$","span","code-segment-189",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$("]}]
+d4:["$","span","code-segment-190",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["date"]}]
+d5:["$","span","code-segment-191",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":[" "]}]
+d6:["$","span","code-segment-192",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["\"+%Y-%m-%d %H:%M:%S\""]}]
+d7:["$","span","code-segment-193",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":[")"]}]
+d8:["$","span","code-segment-194",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["-打tag完成\n"]}]
+d9:["$","span","code-segment-195",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":[["$","span","line-number--40",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[40]}],"\n"]}]
+da:["$","span","line-number--41",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[41]}]
+db:["$","span","code-segment-197",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["echo "]}]
+dc:["$","span","code-segment-198",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$("]}]
+dd:["$","span","code-segment-199",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["date"]}]
+de:["$","span","code-segment-200",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":[" "]}]
+df:["$","span","code-segment-201",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["\"+%Y-%m-%d %H:%M:%S\""]}]
+e0:["$","span","code-segment-202",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":[")"]}]
+e1:["$","span","code-segment-203",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["-开始push镜像\n"]}]
+e2:["$","span","line-number--42",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[42]}]
+e3:["$","span","code-segment-205",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["docker login -u "]}]
+e4:["$","span","code-segment-206",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$default_user"]}]
+e5:["$","span","code-segment-207",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":[" -p "]}]
+e6:["$","span","code-segment-208",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$default_pwd"]}]
+e7:["$","span","code-segment-209",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":[" "]}]
+e8:["$","span","code-segment-210",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$default_registry"]}]
+e9:["$","span","code-segment-211",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\n"]}]
+ea:["$","span","line-number--43",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[43]}]
+eb:["$","span","code-segment-213",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["docker push "]}]
+ec:["$","span","code-segment-214",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$default_registry"]}]
+ed:["$","span","code-segment-215",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["/"]}]
+ee:["$","span","code-segment-216",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$default_project"]}]
+ef:["$","span","code-segment-217",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["/"]}]
+f0:["$","span","code-segment-218",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$app_name"]}]
+f1:["$","span","code-segment-219",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\\:"]}]
+f2:["$","span","code-segment-220",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$tag"]}]
+f3:["$","span","code-segment-221",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\n"]}]
+f4:["$","span","line-number--44",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[44]}]
+f5:["$","span","code-segment-223",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["echo "]}]
+f6:["$","span","code-segment-224",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$("]}]
+f7:["$","span","code-segment-225",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["date"]}]
+f8:["$","span","code-segment-226",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":[" "]}]
+f9:["$","span","code-segment-227",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["\"+%Y-%m-%d %H:%M:%S\""]}]
+fa:["$","span","code-segment-228",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":[")"]}]
+fb:["$","span","code-segment-229",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["-push镜像完成\n"]}]
+fc:["$","span","code-segment-230",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":[["$","span","line-number--45",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[45]}],"\n"]}]
+fd:["$","span","line-number--46",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[46]}]
+fe:["$","span","code-segment-232",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["echo "]}]
+ff:["$","span","code-segment-233",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$("]}]
+100:["$","span","code-segment-234",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["date"]}]
+101:["$","span","code-segment-235",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":[" "]}]
+102:["$","span","code-segment-236",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["\"+%Y-%m-%d %H:%M:%S\""]}]
+103:["$","span","code-segment-237",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":[")"]}]
+104:["$","span","code-segment-238",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["-删除本地镜像\n"]}]
+105:["$","span","line-number--47",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[47]}]
+106:["$","span","code-segment-240",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["docker rmi "]}]
+107:["$","span","code-segment-241",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$app_name"]}]
+108:["$","span","code-segment-242",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\\:latest\n"]}]
+109:["$","span","line-number--48",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[48]}]
+10a:["$","span","code-segment-244",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["docker rmi "]}]
+10b:["$","span","code-segment-245",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$default_registry"]}]
+10c:["$","span","code-segment-246",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["/"]}]
+10d:["$","span","code-segment-247",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$default_project"]}]
+10e:["$","span","code-segment-248",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["/"]}]
+10f:["$","span","code-segment-249",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$app_name"]}]
+110:["$","span","code-segment-250",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\\:"]}]
+111:["$","span","code-segment-251",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$tag"]}]
+112:["$","span","code-segment-252",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\n"]}]
+113:["$","span","code-segment-253",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":[["$","span","line-number--49",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[49]}],"\n"]}]
+114:["$","span","line-number--50",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[50]}]
+115:["$","span","code-segment-255",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["echo \""]}]
+116:["$","span","code-segment-256",{"style":{},"children":["执行发布脚本请输入tag：\"\n"]}]
+117:["$","span","line-number--51",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[51]}]
+118:["$","span","code-segment-258",{"style":{},"children":[""]}]
+119:["$","span","code-segment-259",{"className":"token","style":{"color":"hsl(35, 99%, 36%)"},"children":["echo"]}]
+11a:["$","span","code-segment-260",{"style":{},"children":[" "]}]
+11b:["$","span","code-segment-261",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$tag"]}]
+11c:["$","span","code-segment-20",{"style":{},"children":[""]}]
+11d:["$","span","code-segment-21",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":[".."]}]
+11e:["$","span","code-segment-22",{"style":{},"children":[".\n"]}]
+11f:["$","span","line-number--7",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[7]}]
+120:["$","span","line-number--8",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[8]}]
+121:["$","span","code-segment-26",{"style":{},"children":["location / "]}]
+122:["$","span","code-segment-27",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":["{"]}]
+123:["$","span","code-segment-28",{"style":{},"children":["\n"]}]
+124:["$","span","line-number--9",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[9]}]
+125:["$","span","code-segment-30",{"style":{},"children":["    try_files   /index.html "]}]
+126:["$","span","code-segment-31",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["="]}]
+127:["$","span","code-segment-32",{"className":"token","style":{"color":"hsl(35, 99%, 36%)"},"children":["404"]}]
+128:["$","span","code-segment-33",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":[";"]}]
+129:["$","span","code-segment-34",{"style":{},"children":["\n"]}]
+12a:["$","span","line-number--10",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[10]}]
+12b:["$","span","code-segment-36",{"style":{},"children":["    root        /data/ops/build"]}]
+12c:["$","span","code-segment-37",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":[";"]}]
+12d:["$","span","code-segment-38",{"style":{},"children":["\n"]}]
+12e:["$","span","line-number--11",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[11]}]
+12f:["$","span","code-segment-40",{"style":{},"children":[""]}]
+130:["$","span","code-segment-41",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":["}"]}]
+131:["$","span","code-segment-42",{"style":{},"children":["\n"]}]
+132:["$","span","line-number--12",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[12]}]
+133:["$","span","line-number--13",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[13]}]
+134:["$","span","code-segment-46",{"style":{},"children":["location ~ .*."]}]
+135:["$","span","code-segment-47",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":["("]}]
+136:["$","span","code-segment-48",{"style":{},"children":["js"]}]
+137:["$","span","code-segment-49",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["|"]}]
+138:["$","span","code-segment-50",{"style":{},"children":["gif"]}]
+139:["$","span","code-segment-51",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["|"]}]
+13a:["$","span","code-segment-52",{"style":{},"children":["png"]}]
+13b:["$","span","code-segment-53",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["|"]}]
+13c:["$","span","code-segment-54",{"style":{},"children":["map"]}]
+13d:["$","span","code-segment-55",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["|"]}]
+13e:["$","span","code-segment-56",{"style":{},"children":["jpg"]}]
+13f:["$","span","code-segment-57",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["|"]}]
+140:["$","span","code-segment-58",{"style":{},"children":["css"]}]
+141:["$","span","code-segment-59",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["|"]}]
+142:["$","span","code-segment-60",{"style":{},"children":["ico"]}]
+143:["$","span","code-segment-61",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["|"]}]
+144:["$","span","code-segment-62",{"style":{},"children":["html"]}]
+145:["$","span","code-segment-63",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["|"]}]
+146:["$","span","code-segment-64",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["less"]}]
+147:["$","span","code-segment-65",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":[")"]}]
+148:["$","span","code-segment-66",{"style":{},"children":["$$ "]}]
+149:["$","span","code-segment-67",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":["{"]}]
+14a:["$","span","code-segment-68",{"style":{},"children":["\n"]}]
+14b:["$","span","line-number--14",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[14]}]
+14c:["$","span","code-segment-70",{"style":{},"children":["    root            /data/ops/build"]}]
+14d:["$","span","code-segment-71",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":[";"]}]
+14e:["$","span","code-segment-72",{"style":{},"children":["\n"]}]
+14f:["$","span","line-number--15",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[15]}]
+150:["$","span","code-segment-74",{"style":{},"children":["    proxy_redirect  off"]}]
+151:["$","span","code-segment-75",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":[";"]}]
+152:["$","span","code-segment-76",{"style":{},"children":["\n"]}]
+153:["$","span","line-number--16",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[16]}]
+154:["$","span","code-segment-78",{"style":{},"children":["    expires         30d"]}]
+155:["$","span","code-segment-79",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":[";"]}]
+156:["$","span","code-segment-80",{"style":{},"children":["\n"]}]
+157:["$","span","line-number--17",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[17]}]
+158:["$","span","code-segment-82",{"style":{},"children":["    error_page "]}]
+159:["$","span","code-segment-83",{"className":"token","style":{"color":"hsl(35, 99%, 36%)"},"children":["405"]}]
+15a:["$","span","code-segment-84",{"style":{},"children":["  "]}]
+15b:["$","span","code-segment-85",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["="]}]
+15c:["$","span","code-segment-86",{"className":"token","style":{"color":"hsl(35, 99%, 36%)"},"children":["200"]}]
+15d:["$","span","code-segment-87",{"style":{},"children":[" http://"]}]
+15e:["$","span","code-segment-88",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$host"]}]
+15f:["$","span","code-segment-89",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$request_uri"]}]
+160:["$","span","code-segment-90",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":[";"]}]
+161:["$","span","code-segment-91",{"style":{},"children":["\n"]}]
+162:["$","span","line-number--18",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[18]}]
+163:["$","span","code-segment-93",{"style":{},"children":[""]}]
+164:["$","span","code-segment-94",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":["}"]}]
+165:["$","span","code-segment-95",{"style":{},"children":["\n"]}]
+166:["$","span","line-number--19",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[19]}]
+167:["$","span","line-number--20",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[20]}]
+168:["$","span","code-segment-99",{"style":{},"children":["location /dashboard "]}]
+169:["$","span","code-segment-100",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":["{"]}]
+16a:["$","span","code-segment-101",{"style":{},"children":["\n"]}]
+16b:["$","span","line-number--21",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[21]}]
+16c:["$","span","code-segment-103",{"style":{},"children":["    proxy_pass         http://dashboard/"]}]
+16d:["$","span","code-segment-104",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":[";"]}]
+16e:["$","span","code-segment-105",{"style":{},"children":["\n"]}]
+16f:["$","span","line-number--22",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[22]}]
+170:["$","span","code-segment-107",{"style":{},"children":["    proxy_set_header   Host "]}]
+171:["$","span","code-segment-108",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$Host"]}]
+172:["$","span","code-segment-109",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":[";"]}]
+173:["$","span","code-segment-110",{"style":{},"children":["\n"]}]
+174:["$","span","line-number--23",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[23]}]
+175:["$","span","code-segment-112",{"style":{},"children":[""]}]
+176:["$","span","code-segment-113",{"className":"token","style":{"color":"hsl(230, 8%, 24%)"},"children":["}"]}]
+177:["$","span","code-segment-26",{"style":{},"children":[" "]}]
+178:["$","span","code-segment-27",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\"You should give me a image tag.\""]}]
+179:["$","span","code-segment-28",{"style":{},"children":["\n"]}]
+17a:["$","span","line-number--5",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[5]}]
+17b:["$","span","code-segment-30",{"style":{},"children":[""]}]
+17c:["$","span","code-segment-31",{"className":"token","style":{"color":"hsl(301, 63%, 40%)"},"children":["else"]}]
+17d:["$","span","code-segment-32",{"style":{},"children":["\n"]}]
+17e:["$","span","line-number--6",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[6]}]
+17f:["$","span","code-segment-34",{"style":{},"children":[""]}]
+180:["$","span","code-segment-35",{"className":"token","style":{"color":"hsl(35, 99%, 36%)"},"children":["echo"]}]
+181:["$","span","code-segment-36",{"style":{},"children":[" "]}]
+182:["$","span","code-segment-37",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\"The image tag is "]}]
+183:["$","span","code-segment-38",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$1"]}]
+184:["$","span","code-segment-39",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\""]}]
+185:["$","span","code-segment-40",{"style":{},"children":["\n"]}]
+186:["$","span","line-number--7",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[7]}]
+187:["$","span","line-number--8",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[8]}]
+188:["$","span","code-segment-44",{"style":{},"children":[""]}]
+189:["$","span","code-segment-45",{"className":"token assign-left","style":{"color":"hsl(221, 87%, 60%)"},"children":["oldtag"]}]
+18a:["$","span","code-segment-46",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["="]}]
+18b:["$","span","code-segment-47",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["`"]}]
+18c:["$","span","code-segment-48",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["cat"]}]
+18d:["$","span","code-segment-49",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":[" .env"]}]
+18e:["$","span","code-segment-50",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["`"]}]
+18f:["$","span","code-segment-51",{"style":{},"children":["\n"]}]
+190:["$","span","line-number--9",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[9]}]
+191:["$","span","line-number--10",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[10]}]
+192:["$","span","code-segment-55",{"style":{},"children":[""]}]
+193:["$","span","code-segment-56",{"className":"token","style":{"color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":["## 获取上一次成功的tag，便于在打包失败时及时回退"]}]
+194:["$","span","code-segment-57",{"style":{},"children":["\n"]}]
+195:["$","span","line-number--11",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[11]}]
+196:["$","span","code-segment-59",{"style":{},"children":[""]}]
+197:["$","span","code-segment-60",{"className":"token","style":{"color":"hsl(35, 99%, 36%)"},"children":["echo"]}]
+198:["$","span","code-segment-61",{"style":{},"children":[" "]}]
+199:["$","span","code-segment-62",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\"The old image tag is "]}]
+19a:["$","span","code-segment-63",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$oldtag"]}]
+19b:["$","span","code-segment-64",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\""]}]
+19c:["$","span","code-segment-65",{"style":{},"children":["\n"]}]
+19d:["$","span","line-number--12",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[12]}]
+19e:["$","span","line-number--13",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[13]}]
+19f:["$","span","code-segment-69",{"style":{},"children":[""]}]
+1a0:["$","span","code-segment-70",{"className":"token assign-left","style":{"color":"hsl(221, 87%, 60%)"},"children":["path"]}]
+1a1:["$","span","code-segment-71",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["="]}]
+1a2:["$","span","code-segment-72",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$("]}]
+1a3:["$","span","code-segment-73",{"className":"token","style":{"color":"hsl(35, 99%, 36%)"},"children":["pwd"]}]
+1a4:["$","span","code-segment-74",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":[")"]}]
+1a5:["$","span","code-segment-75",{"style":{},"children":["\n"]}]
+1a6:["$","span","line-number--14",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[14]}]
+1a7:["$","span","line-number--15",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[15]}]
+1a8:["$","span","code-segment-79",{"style":{},"children":[""]}]
+1a9:["$","span","code-segment-80",{"className":"token","style":{"color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":["# 记录新的tag到容器的.env中"]}]
+1aa:["$","span","code-segment-81",{"style":{},"children":["\n"]}]
+1ab:["$","span","line-number--16",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[16]}]
+1ac:["$","span","code-segment-83",{"style":{},"children":[""]}]
+1ad:["$","span","code-segment-84",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["sed"]}]
+1ae:["$","span","code-segment-85",{"style":{},"children":[" "]}]
+1af:["$","span","code-segment-86",{"className":"token parameter","style":{"color":"hsl(221, 87%, 60%)"},"children":["-i"]}]
+1b0:["$","span","code-segment-87",{"style":{},"children":[" "]}]
+1b1:["$","span","code-segment-88",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["\"s/"]}]
+1b2:["$","span","code-segment-89",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$oldtag"]}]
+1b3:["$","span","code-segment-90",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["/TAG="]}]
+1b4:["$","span","code-segment-91",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$1"]}]
+1b5:["$","span","code-segment-92",{"className":"token","style":{"color":"hsl(119, 34%, 47%)"},"children":["/g\""]}]
+1b6:["$","span","code-segment-93",{"style":{},"children":[" "]}]
+1b7:["$","span","code-segment-94",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["$$path"]}]
+1b8:["$","span","code-segment-95",{"style":{},"children":["/.env\n"]}]
+1b9:["$","span","line-number--17",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[17]}]
+1ba:["$","span","line-number--18",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[18]}]
+1bb:["$","span","code-segment-99",{"style":{},"children":[""]}]
+1bc:["$","span","code-segment-100",{"className":"token","style":{"color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":["# docker-compose config"]}]
+1bd:["$","span","code-segment-101",{"style":{},"children":["\n"]}]
+1be:["$","span","line-number--19",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[19]}]
+1bf:["$","span","code-segment-103",{"style":{},"children":[""]}]
+1c0:["$","span","code-segment-104",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["docker"]}]
+1c1:["$","span","code-segment-105",{"style":{},"children":[" login "]}]
+1c2:["$","span","code-segment-106",{"className":"token parameter","style":{"color":"hsl(221, 87%, 60%)"},"children":["-u"]}]
+1c3:["$","span","code-segment-107",{"style":{},"children":[" ops "]}]
+1c4:["$","span","code-segment-108",{"className":"token parameter","style":{"color":"hsl(221, 87%, 60%)"},"children":["-p"]}]
+1c5:["$","span","code-segment-109",{"style":{},"children":[" 你的密码 hub.xxx.com\n"]}]
+1c6:["$","span","line-number--20",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[20]}]
+1c7:["$","span","code-segment-111",{"style":{},"children":[""]}]
+1c8:["$","span","code-segment-112",{"className":"token","style":{"color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":["# 重新启动容器，因为 build 文件夹替换了，所以是最新的打包信息"]}]
+1c9:["$","span","code-segment-113",{"style":{},"children":["\n"]}]
+1ca:["$","span","line-number--21",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[21]}]
+1cb:["$","span","code-segment-115",{"style":{},"children":[""]}]
+1cc:["$","span","code-segment-116",{"className":"token","style":{"color":"hsl(221, 87%, 60%)"},"children":["docker-compose"]}]
+1cd:["$","span","code-segment-117",{"style":{},"children":[" up "]}]
+1ce:["$","span","code-segment-118",{"className":"token parameter","style":{"color":"hsl(221, 87%, 60%)"},"children":["-d"]}]
+1cf:["$","span","code-segment-119",{"style":{},"children":["\n"]}]
+1d0:["$","span","line-number--22",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[22]}]
+1d1:["$","span","line-number--23",{"className":"linenumber react-syntax-highlighter-line-number","style":{"display":"inline-block","minWidth":"2.25em","paddingRight":"1em","textAlign":"right","userSelect":"none","color":"hsl(230, 4%, 64%)","fontStyle":"italic"},"children":[23]}]
+1d2:["$","span","code-segment-123",{"style":{},"children":[""]}]
+1d3:["$","span","code-segment-124",{"className":"token","style":{"color":"hsl(301, 63%, 40%)"},"children":["fi"]}]
+1d8:null
